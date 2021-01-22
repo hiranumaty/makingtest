@@ -30,6 +30,9 @@ ALLOWED_HOSTS = []
 
 # Application definition
 
+
+
+
 INSTALLED_APPS = [
     'django.contrib.admin',
     'django.contrib.auth',
@@ -147,5 +150,9 @@ SIMPLE_JWT = {
     #リフレッシュ後の寿命
     'REFRESH_TOKEN_LIFETIME':timedelta(days=2),
     'ACCESS_TOKEN_LIFETIME':timedelta(minutes=60),
+}
+#Djoserに許可させる権限
+DJOSER ={
+    'SET_PASSWORD_RETYPE':True,
 }
 STATIC_URL = '/static/'

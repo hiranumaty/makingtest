@@ -33,7 +33,7 @@ class User(AbstractBaseUser,PermissionsMixin):
     #管理者の権限を与えるか
     is_staff = models.BooleanField(verbose_name='管理者権限',default=False)
     is_superuser = models.BooleanField(verbose_name='管理者特権',default=False)
-    
+
     email = models.EmailField(verbose_name='メールアドレス',blank=False,null=True,)
     USERNAME_FIELD = 'user_id'
     REQUIRED_FIELDS = ['is_activate',]
