@@ -36,7 +36,7 @@ class User(AbstractBaseUser,PermissionsMixin):
 
     email = models.EmailField(verbose_name='メールアドレス',blank=False,null=True,)
     USERNAME_FIELD = 'user_id'
-    REQUIRED_FIELDS = ['is_activate',]
+    REQUIRED_FIELDS = ['is_activate','email']
     objects = UserManager()
 
     def __str__(self):
